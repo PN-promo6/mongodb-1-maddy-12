@@ -1,0 +1,65 @@
+Exercice 1:
+
+use twisted_db
+show databases
+
+Exercice2:
+
+show databases
+
+Exercice3:
+
+use crooked_db
+db.createCollection("users")
+show databases
+
+Exercice4:
+
+use fake_db
+db.createCollection("users")
+db.createCollection("fake_customers")
+show collections
+
+Exercice 5:
+
+db.fake_users.insert({name:"mick",city:"Chicago", age:64})
+
+Exercice 6:
+
+use magic_db
+db.createCollection("magic_users")
+db.magic_users.insert({name: "Johnson"})
+db.magic_users.find()
+
+
+Exercice 7:
+
+db.magic_products.insert([{productName: "Crazy wine"},{productName:"Weird shoes"}])
+db.magic_products.find()
+db.magic_products.findOne()
+
+Exercice 8:
+
+use magic_db
+db.magic_users.find().pretty()
+
+Exercice 9:
+
+db.users.find({"age":20})
+
+
+Exercice 10:
+
+db.products.find({ "on_sale": true,"price": "female"}).pretty()
+
+Exercice 11:
+
+use artists_db
+db.createCollection("bands")
+db.bands.find({"members":"Eleni"})
+
+
+
+
+
+
