@@ -87,7 +87,33 @@ Exercice 14:
 
 db.bands.find({"creation_date":{$gt:2010},"adress.city":"Coimbra"})
 
+Exercice 15:
 
+db.players.find({"team":"Seatle Supersonics"})
+
+Exercice 16:
+
+db.players.find({"jerseyNumber":40})
+
+Exercice 17:
+
+db.players.find({"previousTeam":"Chicago Bulls"})
+
+Exercice 18:
+
+db.players.find({"previousTeam":{$in:["Chicago Bulls","Miami Heat"]}})
+
+Exercice 19:
+
+db.players.find({"previousTeams":{$all:["Orlando Magic", "New York Knicks"]}})
+
+Exercice 20: 
+
+db.players.find({"age":{$gt:30}})
+
+Exercice 21:
+
+db.players.find({"birthPlace.country":"Spain"})
 
 
 
