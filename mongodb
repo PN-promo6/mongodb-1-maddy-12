@@ -56,7 +56,37 @@ Exercice 11:
 
 use artists_db
 db.createCollection("bands")
+db.bands.insert([{
+    "_id": ObjectId("5cebdd20953b7f098ac9c129"),
+    "members": ["Jimmy", "Eleni"],
+    "creation_date": 2014
+},
+{
+    "_id" : ObjectId("5cebdd20953b7f098ac9c130"),
+    "members" : ["Eleni", "Christine"],
+    "creation_date": 2008
+},
+{
+    "_id" : ObjectId("5cebdd20953b7f098ac9c131"),
+    "members" : ["Lil Random", "HHH", "Doll"],
+    "creation_date": 2019
+}]
+)
 db.bands.find({"members":"Eleni"})
+
+
+Exercice 12:
+
+db.bands.find({"members":{$in:["Eleni","Doll"]}})
+
+Exercice 13:
+
+db.users.find({"creation_date":{$lt:2010}})
+
+Exercice 14:
+
+db.bands.find({"creation_date":{$gt:2010},"adress.city":"Coimbra"})
+
 
 
 
